@@ -1,0 +1,21 @@
+spring:
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    url: jdbc:postgresql://localhost:5432/authentication
+    user: postgres
+    password:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 1
+    name: authentication
+    password:
+    url: jdbc:postgresql://localhost:5432/authentication
+    username: postgres
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
